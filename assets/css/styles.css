@@ -5,12 +5,12 @@ body{
     padding: 0;
     font-family: 'Oswald', sans-serif;
 }
-
 .container-home{
     height: 100vh;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr;
     grid-template-areas: "aside-left content";
+    overflow: hidden;
 }
 #header-top{
    grid-area: header-top;
@@ -26,9 +26,16 @@ body{
 }
 
 /***************** ASIDE-LEFT ***************/
+#aside-left{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 25%; 
+    height: 100vh;
+}
 .aside-left-content{
     background-color: var(--main-color-white);
-    margin-right: 15px;
+    margin-right: 15px; 
     height: 100%;
 }
 .user-picture{
@@ -68,6 +75,8 @@ ul.menu-lists li:nth-child(5){
     border-right: 3px solid transparent;
 }    
 ul.menu-lists li:hover{
+    background-color: #efefef;
+    border-right: 3px solid var(--main-color-theme) !important;
     cursor: pointer;
 } 
 .social-icons{
@@ -98,26 +107,21 @@ ul.menu-lists li:hover{
  }
 
 /************** SECTIONS  ****************/
-#resume, #portfolio, #contact, #about-me{
-    left: 0;
-    top: 0;
+.content section{
     height: 100vh;
     width: 100%;
+    overflow-y: auto;
 }
 #about-me{
-    z-index: 4;
     background-color: brown;
 }
 #resume{
-    z-index: 3;
     background-color: orange;
 }
 #portfolio{
-    z-index: 2;
     background-color: green;
 }
 #contact{
-    z-index: 1;
     background-color: yellow;
 }
 
