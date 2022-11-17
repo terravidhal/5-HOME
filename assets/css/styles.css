@@ -35,8 +35,9 @@ body{
 }
 .aside-left-content{
     background-color: var(--main-color-white);
-    margin-right: 15px; 
-    height: 100%;
+    /*margin-right: 15px; */
+      height: 100vh;
+      width: 95%;
 }
 .user-picture{
    padding: 20px 0 10px 0;
@@ -112,9 +113,6 @@ ul.menu-lists li:hover{
     width: 100%;
     overflow-y: auto;
 }
-#about-me{
-    background-color: brown;
-}
 #resume{
     background-color: orange;
 }
@@ -136,6 +134,7 @@ ul.menu-lists li:hover{
     }
     #header-top{
         display: flex;
+        border-bottom: 1px solid var(--main-color-pinchard);
     }
     #aside-left{
         display: none;
